@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
 export default class Picker extends React.Component<IOSNativeProps> {
   static defaultProps = {
     mode: MODE_DATE,
+    isDark: false,
   };
 
   _picker: NativeRef = React.createRef();
@@ -69,6 +70,7 @@ export default class Picker extends React.Component<IOSNativeProps> {
       mode,
       minuteInterval,
       timeZoneOffsetInMinutes,
+      isDark,
     } = this.props;
 
     invariant(value, 'A date or time should be specified as `value`.');
@@ -92,6 +94,7 @@ export default class Picker extends React.Component<IOSNativeProps> {
           onChange={this._onChange}
           onStartShouldSetResponder={() => true}
           onResponderTerminationRequest={() => false}
+          isDark={isDark}
         />
       </View>
     );

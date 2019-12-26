@@ -91,6 +91,7 @@ export type IOSNativeProps = $ReadOnly<{|
    */
   mode?: IOSMode,
 
+  isDark?: boolean
   /**
    * Timezone offset in minutes.
    *

@@ -51,4 +51,15 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
   _reactMinuteInterval = minuteInterval;
 }
 
+- (void)setIsDark:(BOOL)isDark
+{
+  if (@available(iOS 13, *)) {
+    if (isDark == true) {
+      self.overrideUserInterfaceStyle = UIUserInterfaceStyleDark;
+    } else {
+      self.overrideUserInterfaceStyle = UIUserInterfaceStyleLight;
+    }
+  }
+}
+
 @end

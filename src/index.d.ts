@@ -79,6 +79,7 @@ export type IOSNativeProps = Readonly<BaseProps & {
    */
   mode?: IOSMode,
 
+  isDark?: boolean,
   /**
    * Timezone offset in minutes.
    *

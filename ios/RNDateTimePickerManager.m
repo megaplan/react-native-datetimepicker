@@ -39,5 +39,5 @@ RCT_EXPORT_VIEW_PROPERTY(minuteInterval, NSInteger)
 RCT_EXPORT_VIEW_PROPERTY(onChange, RCTBubblingEventBlock)
 RCT_REMAP_VIEW_PROPERTY(mode, datePickerMode, UIDatePickerMode)
 RCT_REMAP_VIEW_PROPERTY(timeZoneOffsetInMinutes, timeZone, NSTimeZone)
-
+RCT_EXPORT_VIEW_PROPERTY(isDark, BOOL)
 @end
